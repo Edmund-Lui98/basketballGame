@@ -1,32 +1,15 @@
 //
-//  GameScene.swift
+//  GameScene2.swift
 //  basketball
 //
-//  Created by Prism Student on 2020-04-11.
+//  Created by Prism Student on 2020-04-21.
 //  Copyright © 2020 Edmund Lui. All rights reserved.
 //
 
 import SpriteKit
-import GameplayKit   
+import GameplayKit
 
-// The current state of the game
-enum GameState {
-    case playing
-    case menu
-    static var current = GameState.playing
-}
-
-struct PhysicsCatory { // Physics Catory
-    static let none: UInt32 = 0x1 << 0
-    static let ball: UInt32 = 0x1 << 1
-    static let leftBarrier: UInt32 = 0x1 << 2
-    static let rightBarrier: UInt32 = 0x1 << 3
-    static let base: UInt32 = 0x1 << 4
-    static let ballGround: UInt32 = 0x1 << 5
-    static let netGround: UInt32 = 0x1 << 6
-}
-
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene2: SKScene, SKPhysicsContactDelegate {
 
     //Start and end points for when ball is thrown
     var start = CGPoint()
@@ -42,7 +25,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var pi = CGFloat(Double.pi)
 
     var grids = false   // turn on to see all the physics grid lines
-
     
     var bg = SKSpriteNode(imageNamed: "bgImage")
     var rim = SKSpriteNode(imageNamed: "rim")
@@ -56,14 +38,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var endG = SKShapeNode()
     var startG = SKShapeNode()
     var pointsLabel = SKLabelNode()
+    var countdownLabel = SKLabelNode()
 
     var touchingBall = false
 
     override func didMove(to view: SKView) {
         self.physicsWorld.contactDelegate = self
-        
-        print(self.size.height)
-        print(self.size.width)
 
         grav = -4
         yVel = self.frame.height
@@ -198,11 +178,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         pointsLabel.fontSize = self.frame.width / 10
         pointsLabel.zPosition = bg.zPosition + 1
         self.addChild(pointsLabel)
+        
+        //Countdown timer
+        countdownLabel.text = "90"
+        countdownLabel.fontName = "MarkerFelt-Wide"
+        countdownLabel.position = CGPoint(x: self.frame.width / 5, y: self.frame.height * 4 / 2)
+        countdownLabel.fontSize = self.frame.width / 10
+        countdownLabel.zPosition = bg.zPosition + 1
+        self.addChild(countdownLabel)
 
         setBall()
     }
 
-    // Set up the ball. This will be called to reset the ball too
+    // Set up the ball
     func setBall() {
 
         // Remove and reset incase the ball was previously thrown
@@ -275,6 +263,4 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         })
         self.run(SKAction.sequence([wait4,reset]))
     }
-    
 }
-

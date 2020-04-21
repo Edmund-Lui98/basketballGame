@@ -17,7 +17,8 @@
 		3F91492B2441842C00C98357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9149292441842C00C98357 /* LaunchScreen.storyboard */; };
 		3F9149362441842C00C98357 /* basketballTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9149352441842C00C98357 /* basketballTests.swift */; };
 		3F9149412441842C00C98357 /* basketballUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9149402441842C00C98357 /* basketballUITests.swift */; };
-		3F914A0A244F353C00C98357 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F914A09244F353C00C98357 /* MenuScene.swift */; };
+		3F914A0C244F3B7200C98357 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F914A0B244F3B7200C98357 /* Menu.swift */; };
+		3F914A0E244F427900C98357 /* GameScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F914A0D244F427900C98357 /* GameScene2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,8 @@
 		3F91493C2441842C00C98357 /* basketballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = basketballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9149402441842C00C98357 /* basketballUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = basketballUITests.swift; sourceTree = "<group>"; };
 		3F9149422441842C00C98357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F914A09244F353C00C98357 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		3F914A0B244F3B7200C98357 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		3F914A0D244F427900C98357 /* GameScene2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +111,13 @@
 				3F91491C2441842A00C98357 /* GameScene.sks */,
 				3F91491E2441842A00C98357 /* Actions.sks */,
 				3F9149202441842A00C98357 /* GameScene.swift */,
-				3F914A09244F353C00C98357 /* MenuScene.swift */,
 				3F9149222441842A00C98357 /* GameViewController.swift */,
 				3F9149242441842A00C98357 /* Main.storyboard */,
 				3F9149272441842C00C98357 /* Assets.xcassets */,
 				3F9149292441842C00C98357 /* LaunchScreen.storyboard */,
 				3F91492C2441842C00C98357 /* Info.plist */,
+				3F914A0B244F3B7200C98357 /* Menu.swift */,
+				3F914A0D244F427900C98357 /* GameScene2.swift */,
 			);
 			path = basketball;
 			sourceTree = "<group>";
@@ -271,9 +274,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F9149212441842A00C98357 /* GameScene.swift in Sources */,
-				3F914A0A244F353C00C98357 /* MenuScene.swift in Sources */,
 				3F9149232441842A00C98357 /* GameViewController.swift in Sources */,
 				3F91491B2441842A00C98357 /* AppDelegate.swift in Sources */,
+				3F914A0E244F427900C98357 /* GameScene2.swift in Sources */,
+				3F914A0C244F3B7200C98357 /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
